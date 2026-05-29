@@ -738,11 +738,12 @@
 <section id="sobre">
     <div class="container">
         <div class="about-grid">
-            <!-- Foto: substitua o bloco .photo-placeholder pelo elemento abaixo quando tiver a imagem:
-                 <img src="foto.jpg" alt="Renato Batista" class="photo-real">
-            -->
+            <!-- Foto real: coloque o arquivo em img/foto.jpg.
+                 Se o arquivo não existir, o placeholder aparece automaticamente. -->
             <div class="photo-frame reveal">
-                <div class="photo-placeholder">
+                <img src="img/foto.jpg" alt="Renato Batista" class="photo-real"
+                     onerror="this.style.display='none'; document.getElementById('photo-ph').style.display='flex';">
+                <div class="photo-placeholder" id="photo-ph" style="display:none;">
                     <div class="initials">RB</div>
                     <span>Adicione sua foto aqui</span>
                 </div>
@@ -760,7 +761,7 @@
                 </p>
                 <p>
                     Hoje sou Analista de Dados Jr., com graduação em Análise e Desenvolvimento de Sistemas
-                    e cursando Engenharia de Dados. Trabalho com Python, SQL, Power BI e estatística
+                    e cursando bacharelado em Engenharia de Dados. Trabalho com Python, SQL, Power BI e estatística
                     aplicada para transformar dados brutos em decisões mais inteligentes.
                 </p>
                 <p>
@@ -778,8 +779,8 @@
                         <span class="info-val">ADS — UNICV (Jul/2025)</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-key">Pós / Eng. Dados</span>
-                        <span class="info-val">UNICV (cursando)</span>
+                        <span class="info-key">Bacharelado</span>
+                        <span class="info-val">Eng. de Dados — UNICV (cursando)</span>
                     </div>
                     <div class="info-item">
                         <span class="info-key">Inglês</span>
