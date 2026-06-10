@@ -46,7 +46,6 @@ Portfólio pessoal de **Renato Lázaro Santos Batista**, Analista de Dados Jr. c
 * Adicionar imagem/print do dashboard do projeto **HR Analytics** (card usa placeholder)
 * Adicionar imagem/print do dashboard do projeto **E-commerce** (card usa placeholder)
 * Subir o currículo como `cv.pdf` na raiz do repositório (botões "Ver CV" já apontam para ele)
-* Confirmar a URL correta do LinkedIn (`/in/renatosantos1978` vs `/in/renato-santos1978`)
 
 ---
 
@@ -61,4 +60,4 @@ Portfólio pessoal de **Renato Lázaro Santos Batista**, Analista de Dados Jr. c
 ## 👨‍💻 Autor
 
 Renato Lázaro Santos Batista
-🔗 [LinkedIn](https://www.linkedin.com/in/renatosantos1978/) · [GitHub](https://github.com/natoawayrj)
+🔗 [LinkedIn](https://www.linkedin.com/in/renato-santos1978/) · [GitHub](https://github.com/natoawayrj)
