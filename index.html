@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renato Batista | Analista de Dados Jr.</title>
+    <meta name="description" content="Portfólio de Renato Batista, Analista de Dados Jr. — projetos reais com Python, SQL, Power BI e estatística aplicados a problemas de negócio.">
+    <link rel="canonical" href="https://natoawayrj.github.io/">
+    <meta name="theme-color" content="#080d1a">
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://natoawayrj.github.io/">
+    <meta property="og:title" content="Renato Batista | Analista de Dados Jr.">
+    <meta property="og:description" content="Projetos reais de dados com Python, SQL, Power BI e estatística — de ETL a dashboards executivos.">
+    <meta property="og:image" content="https://natoawayrj.github.io/img/dashboard1.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Renato Batista | Analista de Dados Jr.">
+    <meta name="twitter:description" content="Projetos reais de dados com Python, SQL, Power BI e estatística.">
+    <meta name="twitter:image" content="https://natoawayrj.github.io/img/dashboard1.jpg">
+
+    <!-- Favicon (SVG inline) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23080d1a'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial,sans-serif' font-size='48' font-weight='800' fill='%2300c8ff'%3ERB%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,6 +46,24 @@
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
+        /* Navegação por teclado visível */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+
+        /* Respeita preferência de movimento reduzido */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -712,20 +751,21 @@
         </p>
         <div class="hero-cta">
             <a href="#projetos" class="btn-primary">Ver Projetos →</a>
+            <a href="cv.pdf" target="_blank" class="btn-outline">Ver CV ↗</a>
             <a href="https://www.linkedin.com/in/renatosantos1978/" target="_blank" class="btn-outline">LinkedIn ↗</a>
         </div>
         <div class="hero-stats">
             <div>
-                <span class="stat-number">4+</span>
-                <span class="stat-label">Projetos de Dados</span>
+                <span class="stat-number">4</span>
+                <span class="stat-label">Projetos de Dados End-to-End</span>
             </div>
             <div>
                 <span class="stat-number">3+</span>
-                <span class="stat-label">Anos de Experiência</span>
+                <span class="stat-label">Anos de Experiência (Negócios & Dados)</span>
             </div>
             <div>
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Certificações</span>
+                <span class="stat-number">2</span>
+                <span class="stat-label">Formações em Tecnologia</span>
             </div>
         </div>
     </div>
@@ -788,6 +828,7 @@
                     </div>
                 </div>
                 <div class="about-btns">
+                    <a href="cv.pdf" target="_blank" class="btn-primary">Ver CV ↗</a>
                     <a href="https://github.com/natoawayrj" target="_blank" class="btn-outline">GitHub ↗</a>
                     <a href="https://www.linkedin.com/in/renatosantos1978/" target="_blank" class="btn-outline">LinkedIn ↗</a>
                 </div>
@@ -811,7 +852,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">📊</div>
+                    <div class="skill-icon" aria-hidden="true">📊</div>
                     <span class="skill-title">Business Intelligence</span>
                 </div>
                 <div class="tag-list">
@@ -825,7 +866,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">🐍</div>
+                    <div class="skill-icon" aria-hidden="true">🐍</div>
                     <span class="skill-title">Python para Dados</span>
                 </div>
                 <div class="tag-list">
@@ -840,7 +881,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">🗃️</div>
+                    <div class="skill-icon" aria-hidden="true">🗃️</div>
                     <span class="skill-title">SQL & Bancos de Dados</span>
                 </div>
                 <div class="tag-list">
@@ -855,7 +896,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">🔬</div>
+                    <div class="skill-icon" aria-hidden="true">🔬</div>
                     <span class="skill-title">Análise Estatística</span>
                 </div>
                 <div class="tag-list">
@@ -869,7 +910,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">⚙️</div>
+                    <div class="skill-icon" aria-hidden="true">⚙️</div>
                     <span class="skill-title">Engenharia de Dados & ETL</span>
                 </div>
                 <div class="tag-list">
@@ -883,7 +924,7 @@
 
             <div class="skill-card reveal">
                 <div class="skill-header">
-                    <div class="skill-icon">💼</div>
+                    <div class="skill-icon" aria-hidden="true">💼</div>
                     <span class="skill-title">Negócios & Comunicação</span>
                 </div>
                 <div class="tag-list">
@@ -915,13 +956,13 @@
             <!-- ── BRASILEIRÃO ── -->
             <div class="project-card reveal">
                 <img
-                    src="https://raw.githubusercontent.com/natoawayrj/Analise-Brasileirao/main/img/pag1.png"
+                    src="img/brasileirao.jpg"
                     alt="Dashboard Análise do Brasileirão"
                     class="project-img"
                     onerror="this.style.display='none'; document.getElementById('ph-brasileirao').style.display='flex';"
                 >
                 <div class="project-img-placeholder" id="ph-brasileirao" style="display:none;">
-                    <span class="emoji">⚽</span>
+                    <span class="emoji" aria-hidden="true">⚽</span>
                     <span>Dashboard Preview</span>
                 </div>
                 <div class="project-body">
@@ -953,17 +994,17 @@
             <!-- ── HR ANALYTICS ── -->
             <div class="project-card reveal">
                 <div class="project-img-placeholder">
-                    <span class="emoji">👥</span>
+                    <span class="emoji" aria-hidden="true">👥</span>
                     <span>Análise Exploratória · Python</span>
                 </div>
                 <div class="project-body">
                     <span class="project-type">Python · Análise Exploratória</span>
                     <h3 class="project-title">HR Analytics — Análise de Turnover</h3>
                     <p class="project-desc">
-                        Análise dos fatores que influenciam o turnover de funcionários. EDA completa com
-                        tratamento de valores ausentes, conversão de variáveis categóricas, análise de
-                        correlação (Spearman) e aplicação de WOE/IV para identificar variáveis com maior
-                        poder preditivo de saída.
+                        Análise dos fatores que influenciam o turnover de candidatos, com pipeline ETL
+                        modular em Python (v2), tratamento de ausentes por regras de negócio, correlação
+                        de Spearman e WOE/IV. <strong>Resultado:</strong> matrícula universitária é o
+                        preditor mais forte de saída (IV 0,119) e ~25% dos candidatos buscam novo emprego.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
@@ -990,7 +1031,7 @@
                     <img src="img/ecommerce-dashboard.png" alt="Dashboard E-commerce" class="project-img">
                 -->
                 <div class="project-img-placeholder">
-                    <span class="emoji">🛒</span>
+                    <span class="emoji" aria-hidden="true">🛒</span>
                     <span>Adicione o print do dashboard aqui</span>
                 </div>
                 <div class="project-body">
@@ -1021,13 +1062,13 @@
             <!-- ── PIZZARIA JABLONSK ── -->
             <div class="project-card reveal">
                 <img
-                    src="img/dashboard1.png"
+                    src="img/dashboard1.jpg"
                     alt="Dashboard Pizzaria Jablonsk — Visão Executiva"
                     class="project-img"
                     onerror="this.style.display='none'; document.getElementById('ph-pizzaria').style.display='flex';"
                 >
                 <div class="project-img-placeholder" id="ph-pizzaria" style="display:none;">
-                    <span class="emoji">🍕</span>
+                    <span class="emoji" aria-hidden="true">🍕</span>
                     <span>Dashboard Preview</span>
                 </div>
                 <div class="project-body">
@@ -1076,21 +1117,21 @@
                 </p>
                 <div class="contact-links">
                     <a href="mailto:natoawayrj@gmail.com" class="contact-link">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon" aria-hidden="true">✉️</div>
                         <div class="contact-info">
                             <span class="contact-label">Email</span>
                             <span class="contact-val">natoawayrj@gmail.com</span>
                         </div>
                     </a>
                     <a href="https://www.linkedin.com/in/renatosantos1978/" target="_blank" class="contact-link">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon" aria-hidden="true">💼</div>
                         <div class="contact-info">
                             <span class="contact-label">LinkedIn</span>
                             <span class="contact-val">linkedin.com/in/renatosantos1978</span>
                         </div>
                     </a>
                     <a href="https://github.com/natoawayrj" target="_blank" class="contact-link">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         </div>
                         <div class="contact-info">
@@ -1099,7 +1140,7 @@
                         </div>
                     </a>
                     <a href="https://wa.me/5521974837243" target="_blank" class="contact-link">
-                        <div class="contact-icon">📱</div>
+                        <div class="contact-icon" aria-hidden="true">📱</div>
                         <div class="contact-info">
                             <span class="contact-label">WhatsApp</span>
                             <span class="contact-val">(21) 97483-7243</span>
@@ -1144,7 +1185,7 @@
     <p>
         Desenvolvido com ♥ por
         <a href="https://github.com/natoawayrj" target="_blank">Renato Batista</a>
-        &nbsp;·&nbsp; 2025
+        &nbsp;·&nbsp; <span id="footerYear">2026</span>
     </p>
 </footer>
 
@@ -1215,6 +1256,9 @@
         el.style.transitionDelay = (i % 4) * 0.08 + 's';
         revealObserver.observe(el);
     });
+
+    /* ── Ano do rodapé sempre atual ── */
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
