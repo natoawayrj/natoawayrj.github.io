@@ -226,10 +226,11 @@
            HERO
         ───────────────────────────────────── */
         #hero {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            padding-top: 110px;
+            padding-top: 100px;
+            padding-bottom: 60px;
             position: relative;
             overflow: hidden;
         }
@@ -250,7 +251,34 @@
             pointer-events: none;
         }
 
-        .hero-content { position: relative; z-index: 1; }
+        .hero-content { position: relative; z-index: 1; width: 100%; }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-visual { margin: 0; }
+        .hero-visual img {
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+            transition: var(--transition);
+        }
+        .hero-visual img:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0,200,255,0.4);
+        }
+        .hero-visual figcaption {
+            margin-top: 0.7rem;
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
 
         .hero-badge {
             display: inline-flex;
@@ -334,8 +362,8 @@
         .hero-stats {
             display: flex;
             gap: 3.5rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
+            margin-top: 3rem;
+            padding-top: 2.25rem;
             border-top: 1px solid var(--border);
             flex-wrap: wrap;
         }
@@ -446,9 +474,11 @@
         ───────────────────────────────────── */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.25rem;
         }
+        @media (max-width: 1024px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px)  { .skills-grid { grid-template-columns: 1fr; } }
         .skill-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -480,6 +510,15 @@
         .skill-title { font-weight: 600; font-size: 0.92rem; }
 
         .tag-list { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+        .skill-proof {
+            margin-top: 0.9rem;
+            padding-top: 0.7rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.3px;
+        }
+        .skill-proof::before { content: 'Evidência: '; color: var(--accent); font-weight: 600; }
         .tag {
             background: rgba(255,255,255,0.04);
             border: 1px solid var(--border);
@@ -528,14 +567,17 @@
 
         .project-img {
             width: 100%;
-            height: 210px;
+            aspect-ratio: 16 / 9;
+            height: auto;
             object-fit: cover;
-            object-position: top;
+            object-position: top center;
             display: block;
+            background: #0d1526;
         }
+        .zoomable { cursor: zoom-in; }
         .project-img-placeholder {
             width: 100%;
-            height: 210px;
+            aspect-ratio: 16 / 9;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -556,6 +598,7 @@
             border-bottom: 1px solid var(--border);
         }
         .project-gallery a { flex: 1; display: block; }
+        .project-gallery > img { flex: 1; min-width: 0; }
         .project-gallery img {
             width: 100%;
             height: 70px;
@@ -653,6 +696,60 @@
             line-height: 1.65;
         }
 
+        .gallery-hint {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 0.55rem 0.75rem 0;
+            letter-spacing: 0.3px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(4,8,17,0.94);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1.5rem 4rem;
+            cursor: zoom-out;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+        }
+        .lightbox-caption {
+            position: absolute;
+            bottom: 1.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 90%;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1rem; right: 1.25rem;
+            width: 42px; height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.14);
+            color: #ffffff;
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .lightbox-close:hover { background: rgba(0,200,255,0.15); border-color: var(--accent); }
+
         /* ─────────────────────────────────────
            CONTATO
         ───────────────────────────────────── */
@@ -702,16 +799,48 @@
         .contact-label { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.5px; }
         .contact-val { font-size: 0.92rem; font-weight: 600; }
 
-        /* SVG deco */
-        .contact-deco {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .contact-facts {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+        }
+        .facts-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+        .facts-list { display: flex; flex-direction: column; gap: 1rem; }
+        .facts-list > div {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            gap: 1rem;
+            align-items: baseline;
+        }
+        .facts-list dt {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .facts-list dd {
+            margin: 0;
+            font-size: 0.89rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        @media (max-width: 480px) {
+            .facts-list > div { grid-template-columns: 1fr; gap: 0.2rem; }
         }
 
         /* ─────────────────────────────────────
            FOOTER
         ───────────────────────────────────── */
+        .footer-updated { font-size: 0.78rem; color: var(--text-muted); }
         footer {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
@@ -738,12 +867,17 @@
         /* ─────────────────────────────────────
            RESPONSIVE
         ───────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .hero-visual { max-width: 560px; }
+            #hero { min-height: auto; }
+        }
+
         @media (max-width: 900px) {
             .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .photo-frame { width: 260px; margin: 0 auto; }
             .photo-border { display: none; }
             .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .contact-deco { display: none; }
             .projects-grid { grid-template-columns: 1fr; }
         }
 
@@ -798,6 +932,8 @@
 ════════════════════════════════════════ -->
 <section id="hero">
     <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="hero-copy">
         <div class="hero-badge">
             <span class="hero-badge-dot"></span>
             Disponível para oportunidades
@@ -814,6 +950,15 @@
             <a href="cv.pdf" target="_blank" class="btn-outline">Ver CV ↗</a>
             <a href="https://www.linkedin.com/in/renato-santos1978/" target="_blank" class="btn-outline">LinkedIn ↗</a>
         </div>
+        </div>
+
+        <figure class="hero-visual">
+            <img src="img/dashboard1.jpg" class="zoomable"
+                 alt="Pizzaria Jablonsk — dashboard executivo, visão de faturamento e NPS">
+            <figcaption>Pizzaria Jablonsk · visão executiva — clique para ampliar</figcaption>
+        </figure>
+      </div>
+
         <div class="hero-stats">
             <div>
                 <span class="stat-number">4</span>
@@ -907,7 +1052,8 @@
         <p class="section-label">Stack técnico</p>
         <h2 class="section-title">Habilidades</h2>
         <p class="section-sub">
-            Ferramentas e tecnologias que uso no dia a dia para análise, engenharia e visualização de dados.
+            Ferramentas e tecnologias que uso no dia a dia para análise, engenharia e visualização de
+            dados. Cada card aponta onde a stack aparece — só entra na lista o que tem projeto para provar.
         </p>
         <div class="skills-grid">
 
@@ -923,6 +1069,7 @@
                     <span class="tag">KPIs & Dashboards</span>
                     <span class="tag">Power Query</span>
                 </div>
+                <p class="skill-proof">Pizzaria · Brasileirão · E-commerce</p>
             </div>
 
             <div class="skill-card reveal">
@@ -938,6 +1085,7 @@
                     <span class="tag">SciPy</span>
                     <span class="tag">Jupyter</span>
                 </div>
+                <p class="skill-proof">Todos os projetos</p>
             </div>
 
             <div class="skill-card reveal">
@@ -950,9 +1098,9 @@
                     <span class="tag">CTEs</span>
                     <span class="tag">Window Functions</span>
                     <span class="tag">MySQL</span>
-                    <span class="tag">PostgreSQL</span>
-                    <span class="tag">SQL Server</span>
+                    <span class="tag">SQLite</span>
                 </div>
+                <p class="skill-proof">Pizzaria Jablonsk</p>
             </div>
 
             <div class="skill-card reveal">
@@ -961,12 +1109,13 @@
                     <span class="skill-title">Análise Estatística</span>
                 </div>
                 <div class="tag-list">
-                    <span class="tag">R / ggplot2</span>
                     <span class="tag">Correlação de Pearson</span>
-                    <span class="tag">Teste de Hipótese</span>
-                    <span class="tag">WOE / IV</span>
                     <span class="tag">Spearman</span>
+                    <span class="tag">Teste de Hipótese</span>
+                    <span class="tag">Intervalo de Confiança</span>
+                    <span class="tag">WOE / IV</span>
                 </div>
+                <p class="skill-proof">Brasileirão · HR Analytics</p>
             </div>
 
             <div class="skill-card reveal">
@@ -976,11 +1125,12 @@
                 </div>
                 <div class="tag-list">
                     <span class="tag">Pipeline ETL</span>
+                    <span class="tag">Star Schema</span>
+                    <span class="tag">Flask / SQLAlchemy</span>
                     <span class="tag">Limpeza de Dados</span>
-                    <span class="tag">Modelagem de Dados</span>
                     <span class="tag">Git / GitHub</span>
-                    <span class="tag">Excel Avançado</span>
                 </div>
+                <p class="skill-proof">Pizzaria · Brasileirão</p>
             </div>
 
             <div class="skill-card reveal">
@@ -994,6 +1144,7 @@
                     <span class="tag">Análise de KPIs</span>
                     <span class="tag">Relatórios Gerenciais</span>
                 </div>
+                <p class="skill-proof">ACT Digital · todos os projetos</p>
             </div>
 
         </div>
@@ -1019,7 +1170,7 @@
                 <img
                     src="img/dashboard1.jpg"
                     alt="Dashboard Pizzaria Jablonsk — Visão Executiva"
-                    class="project-img"
+                    class="project-img zoomable"
                     onerror="this.style.display='none'; document.getElementById('ph-pizzaria').style.display='flex';"
                 >
                 <div class="project-img-placeholder" id="ph-pizzaria" style="display:none;">
@@ -1027,9 +1178,10 @@
                     <span>Dashboard Preview</span>
                 </div>
                 <div class="project-gallery">
-                    <a href="img/dashboard2.jpg" target="_blank"><img src="img/dashboard2.jpg" alt="Dashboard Pizzaria — Produtos e Operação"></a>
-                    <a href="img/dashboard3.jpg" target="_blank"><img src="img/dashboard3.jpg" alt="Dashboard Pizzaria — Clientes e NPS"></a>
+                    <img src="img/dashboard2.jpg" class="zoomable" alt="Dashboard Pizzaria — Produtos e Operação">
+                    <img src="img/dashboard3.jpg" class="zoomable" alt="Dashboard Pizzaria — Clientes e NPS">
                 </div>
+                <p class="gallery-hint">3 páginas do relatório · clique para ampliar</p>
                 <div class="project-body">
                     <span class="project-type">Python · MySQL · Power BI · Engenharia de Dados</span>
                     <h3 class="project-title">Pizzaria Jablonsk — Pipeline de Dados End-to-End</h3>
@@ -1066,15 +1218,20 @@
             <!-- ── BRASILEIRÃO ── -->
             <div class="project-card reveal">
                 <img
-                    src="img/brasileirao.jpg"
-                    alt="Dashboard Análise do Brasileirão"
-                    class="project-img"
+                    src="img/brasileirao-1.jpg"
+                    alt="Dashboard Brasileirão — Números do campeão"
+                    class="project-img zoomable"
                     onerror="this.style.display='none'; document.getElementById('ph-brasileirao').style.display='flex';"
                 >
                 <div class="project-img-placeholder" id="ph-brasileirao" style="display:none;">
                     <span class="emoji" aria-hidden="true">⚽</span>
                     <span>Dashboard Preview</span>
                 </div>
+                <div class="project-gallery">
+                    <img src="img/brasileirao-2.jpg" class="zoomable" alt="Dashboard Brasileirão — Valor de elenco vs. performance">
+                    <img src="img/brasileirao-3.jpg" class="zoomable" alt="Dashboard Brasileirão — Tese de Guardiola">
+                </div>
+                <p class="gallery-hint">3 páginas do relatório · clique para ampliar</p>
                 <div class="project-body">
                     <span class="project-type">Python · Power BI · Estatística</span>
                     <h3 class="project-title">Análise do Campeonato Brasileiro (2007–2025)</h3>
@@ -1207,43 +1364,30 @@
                             <span class="contact-val">github.com/natoawayrj</span>
                         </div>
                     </a>
-                    <a href="https://wa.me/5521974837243" target="_blank" class="contact-link">
-                        <div class="contact-icon" aria-hidden="true">📱</div>
-                        <div class="contact-info">
-                            <span class="contact-label">WhatsApp</span>
-                            <span class="contact-val">(21) 97483-7243</span>
-                        </div>
-                    </a>
                 </div>
             </div>
 
-            <!-- SVG decoration -->
-            <div class="contact-deco reveal">
-                <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="160" cy="160" r="140" stroke="rgba(0,200,255,0.07)" stroke-width="1"/>
-                    <circle cx="160" cy="160" r="105" stroke="rgba(0,200,255,0.08)" stroke-width="1"/>
-                    <circle cx="160" cy="160" r="70" stroke="rgba(0,200,255,0.10)" stroke-width="1"/>
-                    <circle cx="160" cy="160" r="35" fill="rgba(0,200,255,0.08)" stroke="rgba(0,200,255,0.28)" stroke-width="1.5"/>
-                    <text x="160" y="168" text-anchor="middle" fill="#00c8ff" font-size="22" font-family="Inter,sans-serif" font-weight="800">RS</text>
-                    <circle cx="160" cy="20" r="7" fill="#00c8ff" opacity="0.75"/>
-                    <circle cx="272" cy="88" r="5" fill="#6366f1" opacity="0.6"/>
-                    <circle cx="295" cy="200" r="6" fill="#00c8ff" opacity="0.5"/>
-                    <circle cx="200" cy="288" r="5" fill="#6366f1" opacity="0.65"/>
-                    <circle cx="64" cy="255" r="7" fill="#00c8ff" opacity="0.55"/>
-                    <circle cx="28" cy="140" r="5" fill="#6366f1" opacity="0.5"/>
-                    <circle cx="75" cy="55" r="4" fill="#00c8ff" opacity="0.45"/>
-                    <!-- connecting lines -->
-                    <line x1="160" y1="27" x2="160" y2="125" stroke="rgba(0,200,255,0.12)" stroke-width="1"/>
-                    <line x1="267" y1="93" x2="193" y2="145" stroke="rgba(0,200,255,0.12)" stroke-width="1"/>
-                    <line x1="290" y1="196" x2="195" y2="168" stroke="rgba(0,200,255,0.10)" stroke-width="1"/>
-                    <line x1="195" y1="283" x2="170" y2="195" stroke="rgba(0,200,255,0.10)" stroke-width="1"/>
-                    <line x1="69" y1="250" x2="130" y2="185" stroke="rgba(0,200,255,0.10)" stroke-width="1"/>
-                    <line x1="33" y1="144" x2="125" y2="158" stroke="rgba(0,200,255,0.10)" stroke-width="1"/>
-                </svg>
+            <div class="contact-facts reveal">
+                <h3 class="facts-title">Como posso atuar</h3>
+                <dl class="facts-list">
+                    <div><dt>Modelo</dt><dd>CLT, PJ ou estágio/trainee em dados</dd></div>
+                    <div><dt>Formato</dt><dd>Remoto, híbrido ou presencial no Rio de Janeiro</dd></div>
+                    <div><dt>Base</dt><dd>Niterói, RJ — disponível para começar de imediato</dd></div>
+                    <div><dt>Idiomas</dt><dd>Português (nativo) · Inglês intermediário (B2)</dd></div>
+                    <div><dt>Foco</dt><dd>Análise de dados, BI e engenharia de dados júnior</dd></div>
+                </dl>
             </div>
         </div>
     </div>
 </section>
+
+
+<!-- Lightbox de dashboards -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Dashboard ampliado">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
 
 
 <!-- ═══════════════════════════════════════
@@ -1254,6 +1398,7 @@
         Desenvolvido com ♥ por
         <a href="https://github.com/natoawayrj" target="_blank">Renato Santos</a>
         &nbsp;·&nbsp; <span id="footerYear">2026</span>
+        <br><span class="footer-updated">Atualizado em setembro de 2026</span>
     </p>
 </footer>
 
@@ -1323,6 +1468,46 @@
         // stagger siblings inside the same parent
         el.style.transitionDelay = (i % 4) * 0.08 + 's';
         revealObserver.observe(el);
+    });
+
+    /* ── Lightbox de dashboards ── */
+    const lightbox     = document.getElementById('lightbox');
+    const lightboxImg  = document.getElementById('lightboxImg');
+    const lightboxCap  = document.getElementById('lightboxCaption');
+    const lightboxBtn  = document.getElementById('lightboxClose');
+    let lastFocused = null;
+
+    function openLightbox(img) {
+        lastFocused = document.activeElement;
+        lightboxImg.src = img.currentSrc || img.src;
+        lightboxImg.alt = img.alt || '';
+        lightboxCap.textContent = img.alt || '';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        lightboxBtn.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll('.zoomable').forEach(img => {
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.addEventListener('click', () => openLightbox(img));
+        img.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img); }
+        });
+    });
+
+    lightbox.addEventListener('click', e => {
+        if (e.target !== lightboxImg) closeLightbox();
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
     });
 
     /* ── Ano do rodapé sempre atual ── */
