@@ -516,6 +516,16 @@
             box-shadow: 0 24px 60px rgba(0,0,0,0.45);
         }
 
+        .project-note {
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--text-muted);
+            border-left: 2px solid rgba(0,200,255,0.35);
+            padding-left: 0.75rem;
+            margin: -0.4rem 0 1.1rem;
+            line-height: 1.6;
+        }
+
         .project-img {
             width: 100%;
             height: 210px;
@@ -994,12 +1004,17 @@
                     <span class="project-type">Python · MySQL · Power BI · Engenharia de Dados</span>
                     <h3 class="project-title">Pizzaria Jablonsk — Pipeline de Dados End-to-End</h3>
                     <p class="project-desc">
-                        <strong>Problema:</strong> como dar a uma pizzaria visibilidade total de vendas,
-                        entrega e satisfação — partindo do zero, sem nenhum dado?
-                        <strong>Solução:</strong> construí a operação completa: sistema de pedidos
-                        (Flask + MySQL), star schema, 6 meses de dados e análise SQL avançada
-                        (window functions, CTEs). <strong>Resultado:</strong> dashboard executivo
-                        em 3 páginas — faturamento, NPS, SLA de entrega e LTV — e aplicação transacional em Flask que alimenta o pipeline.
+                        <strong>Problema:</strong> como construir uma cadeia completa de dados quando não
+                        existe nenhum dado? <strong>Solução:</strong> modelei o domínio, construí o sistema
+                        transacional (Flask + MySQL), gerei 6 meses de operação com um simulador de demanda
+                        parametrizado (sazonalidade por dia da semana e por hora) e montei views em star
+                        schema sobre as tabelas operacionais. <strong>Resultado:</strong> pipeline
+                        OLTP → star schema → dashboard executivo em 3 páginas, com as métricas que uma
+                        pizzaria real acompanharia (faturamento, NPS, SLA de entrega, LTV).
+                    </p>
+                    <p class="project-note">
+                        Dados sintéticos — o objetivo é demonstrar a arquitetura, não extrair conclusões
+                        de mercado.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
