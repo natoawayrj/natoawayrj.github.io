@@ -1273,25 +1273,37 @@
 
             <!-- ── HR ANALYTICS ── -->
             <div class="project-card reveal">
-                <div class="project-img-placeholder">
+                <img
+                    src="img/hr-1.png"
+                    alt="Gráfico HR Analytics — % procurando trocar de emprego por matrícula universitária"
+                    class="project-img zoomable"
+                    onerror="this.style.display='none'; document.getElementById('ph-hr').style.display='flex';"
+                >
+                <div class="project-img-placeholder" id="ph-hr" style="display:none;">
                     <span class="emoji" aria-hidden="true">👥</span>
                     <span>Análise Exploratória · Python</span>
                 </div>
+                <div class="project-gallery">
+                    <img src="img/hr-2.png" class="zoomable" alt="Gráfico HR Analytics — Information Value por variável">
+                    <img src="img/hr-3.png" class="zoomable" alt="Gráfico HR Analytics — Correlação de Spearman">
+                </div>
+                <p class="gallery-hint">3 gráficos da análise (Python) · clique para ampliar</p>
                 <div class="project-body">
                     <span class="project-type">Python · Análise Exploratória</span>
-                    <h3 class="project-title">HR Analytics — Análise de Turnover</h3>
+                    <h3 class="project-title">HR Analytics — Intenção de Troca de Emprego</h3>
                     <p class="project-desc">
-                        <strong>Problema:</strong> quais fatores levam profissionais a trocar de emprego?
+                        <strong>Problema:</strong> entre 19 mil participantes de um treinamento em Data
+                        Science, quais características se associam à intenção de trocar de emprego?
                         <strong>Solução:</strong> pipeline ETL modular em Python (v2), tratamento de
                         ausentes por regras de negócio, correlação de Spearman e WOE/IV.
-                        <strong>Resultado:</strong> nenhuma variável isolada explica bem a saída — a mais
-                        informativa (matrícula universitária, IV 0,119) tem poder preditivo apenas
-                        moderado, o que indica turnover multifatorial. ~25% dos candidatos buscam novo
-                        emprego.
+                        <strong>Resultado:</strong> ~25% buscam novo emprego, e nenhuma variável isolada
+                        explica bem essa intenção — a mais informativa (matrícula universitária, IV 0,119)
+                        tem poder preditivo apenas moderado, o que indica um fenômeno multifatorial.
                     </p>
                     <p class="project-note">
                         Dados: <em>HR Analytics: Job Change of Data Scientists</em> (Kaggle, dataset
-                        público).
+                        público). O alvo é intenção declarada de mudar de emprego, não desligamento
+                        efetivo — por isso não é tratado como turnover.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
