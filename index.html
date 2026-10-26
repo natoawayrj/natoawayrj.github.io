@@ -699,6 +699,9 @@
             line-height: 1.65;
         }
 
+        .project-gallery.many { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .project-gallery.many img { width: 100%; min-width: 0; height: auto; aspect-ratio: 16 / 9; object-position: center; opacity: 0.85; }
+
         .gallery-hint {
             font-size: 0.74rem;
             color: var(--text-muted);
@@ -964,8 +967,8 @@
 
         <div class="hero-stats">
             <div>
-                <span class="stat-number">4</span>
-                <span class="stat-label">Projetos de Dados</span>
+                <span class="stat-number">5</span>
+                <span class="stat-label">Projetos Práticos</span>
             </div>
             <div>
                 <span class="stat-number">3+</span>
@@ -1131,9 +1134,11 @@
                     <span class="tag">Star Schema</span>
                     <span class="tag">Flask / SQLAlchemy</span>
                     <span class="tag">Limpeza de Dados</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Docker Compose</span>
                     <span class="tag">Git / GitHub</span>
                 </div>
-                <p class="skill-proof">Pizzaria · Brasileirão</p>
+                <p class="skill-proof">Pizzaria · Brasileirão · Pronúncia</p>
             </div>
 
             <div class="skill-card reveal">
@@ -1164,7 +1169,7 @@
         <h2 class="section-title">Projetos</h2>
         <p class="section-sub">
             Projetos reais aplicando Python, SQL e Power BI em problemas de negócio nas áreas
-            de food service, esportes e RH.
+            de food service, esportes e RH, e um app com IA local (Whisper + LLM), API e Docker.
         </p>
         <div class="projects-grid">
 
@@ -1314,6 +1319,67 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/natoawayrj/Initial-HR-Analytics-project" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── PRONÚNCIA (IA LOCAL) ── -->
+            <div class="project-card reveal">
+                <img
+                    src="img/pronuncia-1.png"
+                    alt="App Pronúncia — leitura guiada: frase-alvo, foco no som e gravação"
+                    class="project-img zoomable"
+                    onerror="this.style.display='none'; document.getElementById('ph-pronuncia').style.display='flex';"
+                >
+                <div class="project-img-placeholder" id="ph-pronuncia" style="display:none;">
+                    <span class="emoji" aria-hidden="true">🎙️</span>
+                    <span>App de inglês · IA local</span>
+                </div>
+                <div class="project-gallery many">
+                    <img src="img/pronuncia-2.png" class="zoomable" alt="App Pronúncia — resultado com nota, diff colorido e feedback do LLM local" onerror="this.style.display='none'">
+                    <img src="img/pronuncia-3.png" class="zoomable" alt="App Pronúncia — modo conversar com o LLM local" onerror="this.style.display='none'">
+                    <img src="img/pronuncia-4.png" class="zoomable" alt="App Pronúncia — aba Progresso" onerror="this.style.display='none'">
+                    <img src="img/pronuncia-5.png" class="zoomable" alt="App Pronúncia — aba Sons, dificuldade por som" onerror="this.style.display='none'">
+                    <img src="img/pronuncia-6.png" class="zoomable" alt="App Pronúncia — explicação fonética em português" onerror="this.style.display='none'">
+                </div>
+                <p class="gallery-hint">Telas do app · clique para ampliar</p>
+                <div class="project-body">
+                    <span class="project-type">Python · FastAPI · MySQL · Docker · IA Local</span>
+                    <h3 class="project-title">Pronúncia — App de Inglês com IA 100% Local</h3>
+                    <p class="project-desc">
+                        <strong>Problema:</strong> como praticar pronúncia em inglês em casa, com feedback
+                        imediato, sem pagar API e sem enviar a voz de crianças para a nuvem?
+                        <strong>Solução:</strong> API em FastAPI com login JWT, que recebe o áudio, converte
+                        com ffmpeg, transcreve com Whisper local (whisper.cpp), compara a transcrição com a
+                        frase-alvo e pede feedback a um LLM local (Qwen2.5 7B via LM Studio). A pronúncia vem
+                        do CMUdict e a resposta do LLM é validada em Python, para o feedback não inventar sons.
+                        O histórico das tentativas fica em MySQL, e backend + banco sobem juntos com Docker Compose.
+                        <strong>Resultado:</strong> app em uso por 3 pessoas, com leitura guiada, chat em
+                        inglês por texto ou voz, abas de progresso e de sons mais difíceis, painel do
+                        responsável e instalação como PWA no celular. As chamadas aos modelos são trocáveis só pelo <code>.env</code>
+                        (local ou API compatível com OpenAI).
+                    </p>
+                    <p class="project-note">
+                        Decisões de dados: o áudio nunca é gravado (só texto e métricas vão ao banco), a
+                        frase é copiada para dentro de cada tentativa para o histórico não mudar quando ela
+                        é editada, e frases são desativadas em vez de apagadas. Um modelo sem "raciocínio"
+                        respondeu em 7,5 s contra 59 s de um modelo com raciocínio na mesma tarefa.
+                        Uso doméstico, não é um produto em produção.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">FastAPI</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Docker Compose</span>
+                        <span class="project-tag">JWT</span>
+                        <span class="project-tag">Whisper</span>
+                        <span class="project-tag">LLM local</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/natoawayrj/Ingl-s" target="_blank" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             Ver no GitHub
                         </a>
