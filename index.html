@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renato Santos | Assistente de BI / Dados Jr.</title>
-    <meta name="description" content="Portfólio de Renato Santos, Assistente de BI / Dados Jr. — projetos reais com Python, SQL, Power BI e estatística aplicados a problemas de negócio.">
+    <title>Renato Santos | Analista de Dados Jr.</title>
+    <meta name="description" content="Portfólio de Renato Santos, Analista de Dados Jr. — projetos reais com Python, SQL, Power BI e estatística aplicados a problemas de negócio.">
     <link rel="canonical" href="https://natoawayrj.github.io/">
     <meta name="theme-color" content="#080d1a">
 
     <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://natoawayrj.github.io/">
-    <meta property="og:title" content="Renato Santos | Assistente de BI / Dados Jr.">
+    <meta property="og:title" content="Renato Santos | Analista de Dados Jr.">
     <meta property="og:description" content="Python, SQL e Power BI aplicados a problemas de negócio. Projetos com pipeline, modelagem e dashboard executivo.">
     <meta property="og:image" content="https://natoawayrj.github.io/img/og-cover.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Renato Santos — Assistente de BI / Dados Jr.">
+    <meta property="og:image:alt" content="Renato Santos — Analista de Dados Jr.">
     <meta property="og:locale" content="pt_BR">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Renato Santos | Assistente de BI / Dados Jr.">
+    <meta name="twitter:title" content="Renato Santos | Analista de Dados Jr.">
     <meta name="twitter:description" content="Python, SQL e Power BI aplicados a problemas de negócio.">
     <meta name="twitter:image" content="https://natoawayrj.github.io/img/og-cover.png">
 
@@ -860,6 +860,36 @@
         /* ─────────────────────────────────────
            SCROLL-REVEAL
         ───────────────────────────────────── */
+        /* ─────────────────────────────────────
+           EXPERIÊNCIA
+        ───────────────────────────────────── */
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .exp-head { margin-bottom: 1rem; }
+        .exp-meta {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .exp-list {
+            margin: 0 0 1rem 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        .exp-list li { margin-bottom: 0.5rem; }
+        .exp-note {
+            margin-top: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 900px;
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(22px);
@@ -913,6 +943,7 @@
         <a href="#hero" class="nav-logo">Renato<span>.dados</span></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -926,6 +957,7 @@
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <ul>
         <li><a href="#sobre"       class="mob-link">Sobre</a></li>
+        <li><a href="#experiencia" class="mob-link">Experiência</a></li>
         <li><a href="#habilidades" class="mob-link">Habilidades</a></li>
         <li><a href="#projetos"    class="mob-link">Projetos</a></li>
         <li><a href="#contato"     class="mob-link">Contato</a></li>
@@ -948,13 +980,13 @@
             Renato<br><span class="accent">Santos</span>
         </h1>
         <p class="hero-tagline">
-            Assistente de BI / Dados Jr. com background em negócios — transformo dados brutos em
+            Analista de Dados Jr. com background em negócios — transformo dados brutos em
             insights que apoiam decisões reais. Python · SQL · Power BI · Estatística.
         </p>
         <div class="hero-cta">
             <a href="#projetos" class="btn-primary">Ver Projetos →</a>
             <a href="cv.pdf" target="_blank" class="btn-outline">Ver CV ↗</a>
-            <a href="https://www.linkedin.com/in/renato-santos1978/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+            <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" class="btn-outline">LinkedIn ↗</a>
         </div>
         </div>
 
@@ -967,7 +999,7 @@
 
         <div class="hero-stats">
             <div>
-                <span class="stat-number">4</span>
+                <span class="stat-number">5</span>
                 <span class="stat-label">Projetos Práticos</span>
             </div>
             <div>
@@ -1005,9 +1037,10 @@
                 <h2 class="section-title">De Analista de Negócios<br>a Analista de Dados</h2>
                 <p>
                     Minha jornada na área de dados começou de dentro para fora. Como Analista de Negócios
-                    na ACT Digital, passei um ano e meio levantando requisitos, mapeando processos e
-                    comunicando indicadores para stakeholders — e foi exatamente ali que percebi que
-                    queria estar do outro lado da equação: construindo as análises, não apenas consumindo.
+                    na ACT Digital, passei 14 meses tratando dados de projetos de infraestrutura,
+                    construindo indicadores e dashboards em Power BI e comunicando resultados às áreas de
+                    negócio — e foi exatamente ali que percebi que queria estar do outro lado da equação:
+                    construindo as análises, não apenas consumindo.
                 </p>
                 <p>
                     Venho da Análise de Negócios e hoje trabalho como analista de dados nos meus próprios
@@ -1042,10 +1075,58 @@
                 <div class="about-btns">
                     <a href="cv.pdf" target="_blank" class="btn-primary">Ver CV ↗</a>
                     <a href="https://github.com/natoawayrj" target="_blank" class="btn-outline">GitHub ↗</a>
-                    <a href="https://www.linkedin.com/in/renato-santos1978/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+                    <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" class="btn-outline">LinkedIn ↗</a>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     EXPERIÊNCIA
+════════════════════════════════════════ -->
+<section id="experiencia">
+    <div class="container">
+        <p class="section-label">Trajetória</p>
+        <h2 class="section-title">Experiência</h2>
+        <p class="section-sub">
+            Onde trabalhei com dados, indicadores e processos antes dos projetos próprios.
+        </p>
+        <div class="exp-grid">
+
+            <div class="skill-card reveal">
+                <div class="exp-head">
+                    <span class="skill-title">Analista de Negócios · ACT Digital</span>
+                    <span class="exp-meta">Jun/2022 – Jul/2023 · 14 meses</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Tratamento e análise crítica de dados de projetos de infraestrutura em 10 cidades, apoiando a gerência sênior na identificação e na mensuração de oportunidades.</li>
+                    <li>Construção de indicadores (KPIs) e 10 dashboards dinâmicos em Power BI, com as áreas de negócio, engenharia e operações, para acompanhar metas estratégicas.</li>
+                    <li>Relatórios analíticos recorrentes apresentados às áreas parceiras ao longo de 14 meses.</li>
+                </ul>
+                <p class="skill-proof">Power BI · KPIs · Relatórios gerenciais</p>
+            </div>
+
+            <div class="skill-card reveal">
+                <div class="exp-head">
+                    <span class="skill-title">Auxiliar Administrativo · Concessionária Reviver</span>
+                    <span class="exp-meta">Mai/2019 – Out/2022</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Extração, tratamento e consolidação de bases históricas de dados, com foco em qualidade e integridade das informações.</li>
+                    <li>Redução da média anual de incidentes de 15 para menos de 2, com análise de dados, identificação de inconsistências e padronização de processos.</li>
+                    <li>Estruturação de dados em Excel avançado, criando fluxos de trabalho e eliminando erros repetitivos nos controles internos.</li>
+                </ul>
+                <p class="skill-proof">Excel · Qualidade de dados · Padronização de processos</p>
+            </div>
+
+        </div>
+        <p class="exp-note">
+            <strong>Certificações e cursos:</strong> Google Data Analytics Professional Certificate
+            (jun/2025); Data Analyst Training Program (Data Science Academy); SQL from Zero to Mastery
+            (Udemy); IA Generativa Aplicada para Produtividade, Automação e APIs (Claude/Anthropic).
+        </p>
     </div>
 </section>
 
@@ -1100,9 +1181,7 @@
                     <span class="skill-title">SQL & Bancos de Dados</span>
                 </div>
                 <div class="tag-list">
-                    <span class="tag">SQL Avançado</span>
-                    <span class="tag">CTEs</span>
-                    <span class="tag">Window Functions</span>
+                    <span class="tag">SQL</span>
                     <span class="tag">MySQL</span>
                     <span class="tag">SQLite</span>
                 </div>
@@ -1168,8 +1247,9 @@
         <p class="section-label">Portfólio</p>
         <h2 class="section-title">Projetos</h2>
         <p class="section-sub">
-            Projetos reais aplicando Python, SQL e Power BI em problemas de negócio nas áreas
-            de food service, esportes e RH, e um app com IA local (Whisper + LLM), API e Docker.
+            Projetos práticos aplicando Python, SQL e Power BI em problemas de negócio nas áreas
+            de food service, esportes, RH e vendas, e um app com IA local (Whisper + LLM), API e Docker.
+            Onde os dados são sintéticos ou de exercício, o card diz.
         </p>
         <div class="projects-grid">
 
@@ -1246,18 +1326,21 @@
                     <p class="project-desc">
                         <strong>Problema:</strong> quanto o valor de mercado do elenco se associa ao
                         desempenho no Brasileirão? <strong>Solução:</strong> ETL em Python sobre 19
-                        temporadas (378 pares time-temporada), com inferência estatística e 3 dashboards
-                        no Power BI. <strong>Insights:</strong> 74% dos campeões (14 de 19) estavam no
-                        G4 de valor de mercado do elenco no ano do título. A correlação
-                        entre valor de elenco e pontos é 0,57 (IC95% 0,47–0,65; n=218) até 2017 e 0,42
-                        (IC95% 0,29–0,54; n=160) de 2018 em diante: a queda existe, mas os intervalos se
-                        sobrepõem e ela não é conclusiva. E a <em>Tese de Guardiola</em> foi refutada:
-                        só 21% dos líderes da 8ª rodada terminaram campeões.
+                        temporadas (378 pares time-temporada; 17 temporadas completas nas inferências),
+                        com testes automatizados e 3 dashboards no Power BI. <strong>Insights:</strong>
+                        13 de 17 campeões (76%) estavam no G4 de valor de mercado do elenco no ano do
+                        título. Comparando clubes dentro de cada temporada, a correlação de Spearman entre
+                        valor de elenco e pontos fica em torno de 0,67 (de 0,35 a 0,84), sem diferença
+                        entre antes e depois de 2018 (0,67 e 0,68). Descartei o Pearson sobre o valor bruto:
+                        a coluna misturava escalas e moedas entre períodos, o que simulava uma queda após
+                        2018. E a <em>Tese de Guardiola</em> não se sustenta como regra: o líder da 8ª
+                        rodada foi campeão em 4 de 17 temporadas (24%; IC95% 10%–47%).
                     </p>
                     <p class="project-note">
                         Associação não estabelece causalidade: valor de elenco e título compartilham
                         causas comuns (receita, histórico, gestão). Valor de mercado do elenco não é
-                        o mesmo que investimento realizado.
+                        o mesmo que investimento realizado. A origem de parte dos dados brutos não está
+                        registrada; fontes e limitações estão documentadas no repositório.
                     </p>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
@@ -1326,6 +1409,55 @@
                 </div>
             </div>
 
+            <!-- ── E-COMMERCE ── -->
+            <div class="project-card reveal">
+                <img loading="lazy" decoding="async"
+                    src="img/ecommerce-1.webp"
+                    alt="Dashboard em Power BI de vendas de e-commerce: visão geral com faturamento, ticket médio, ranking de produtos e faturamento por estado"
+                    class="project-img zoomable"
+                    onerror="this.style.display='none'; document.getElementById('ph-ecommerce').style.display='flex';"
+                >
+                <div class="project-img-placeholder" id="ph-ecommerce" style="display:none;">
+                    <span class="emoji" aria-hidden="true">🛒</span>
+                    <span>Dashboard Preview</span>
+                </div>
+                <div class="project-gallery">
+                    <img loading="lazy" decoding="async" src="img/ecommerce-2.webp" class="zoomable" alt="Dashboard de vendas de e-commerce filtrado por janeiro: KPIs e gráficos recalculados">
+                    <img loading="lazy" decoding="async" src="img/ecommerce-3.webp" class="zoomable" alt="Dashboard de vendas de e-commerce filtrado por Rio de Janeiro (RJ): KPIs, produtos e faturamento recalculados">
+                </div>
+                <p class="gallery-hint">Visão geral e filtros por mês e por estado · clique para ampliar</p>
+                <div class="project-body">
+                    <span class="project-type">Python · Power BI · DAX</span>
+                    <h3 class="project-title">Dashboard de Vendas — E-commerce</h3>
+                    <p class="project-desc">
+                        <strong>Problema:</strong> como transformar uma base bruta de vendas em indicadores
+                        que um gestor consiga usar? <strong>Solução:</strong> ETL em Python (limpeza,
+                        tipagem e uma tabela plana preparada para o Power BI) e dashboard com KPIs em DAX.
+                        <strong>Resultado:</strong> R$ 6,3 mi de faturamento (R$ 6.302.329) em 600 itens de
+                        pedido, com ticket médio de cerca de R$ 10,5 mil, ranking de produtos e faturamento
+                        por estado, com SP e CE em destaque.
+                    </p>
+                    <p class="project-note">
+                        Dados: base de estudo, fabricada para exercício (50 clientes, 10 produtos,
+                        jan–abr/2026); não representa vendas reais. O projeto mede só receita bruta: sem
+                        custo, margem, devolução ou sazonalidade, e os destaques são propriedades dessa
+                        base, não descobertas de mercado.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Pandas</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">DAX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/natoawayrj/E-commerce" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
             <!-- ── PRONÚNCIA (IA LOCAL) ── -->
             <div class="project-card reveal">
                 <img loading="lazy" decoding="async"
@@ -1387,21 +1519,6 @@
 
         </div>
 
-        <div class="other-projects reveal">
-            <h3 class="other-title">Outros projetos</h3>
-            <ul class="other-list">
-                <li>
-                    <a href="https://github.com/natoawayrj/E-commerce" target="_blank">
-                        Dashboard de Vendas — E-commerce ↗
-                    </a>
-                    <span>
-                        Pipeline ETL em Python alimentando dashboard executivo no Power BI:
-                        R$ 6,3 mi de faturamento mapeados por categoria, produto e UF.
-                        Python · Pandas · Power BI · DAX.
-                    </span>
-                </li>
-            </ul>
-        </div>
     </div>
 </section>
 
@@ -1416,7 +1533,7 @@
                 <p class="section-label">Contato</p>
                 <h2 class="section-title">Vamos trabalhar<br>juntos?</h2>
                 <p>
-                    Estou disponível para oportunidades como Assistente de BI / Dados Jr.
+                    Estou disponível para oportunidades como Analista de Dados Jr.
                     Aberto a conversas, freelas e colaborações.
                 </p>
                 <div class="contact-links">
@@ -1427,11 +1544,11 @@
                             <span class="contact-val">natoawayrj@gmail.com</span>
                         </div>
                     </a>
-                    <a href="https://www.linkedin.com/in/renato-santos1978/" target="_blank" class="contact-link">
+                    <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" class="contact-link">
                         <div class="contact-icon" aria-hidden="true">💼</div>
                         <div class="contact-info">
                             <span class="contact-label">LinkedIn</span>
-                            <span class="contact-val">linkedin.com/in/renato-santos1978</span>
+                            <span class="contact-val">linkedin.com/in/renato-santos-dados</span>
                         </div>
                     </a>
                     <a href="https://github.com/natoawayrj" target="_blank" class="contact-link">
@@ -1477,7 +1594,7 @@
         Desenvolvido com ♥ por
         <a href="https://github.com/natoawayrj" target="_blank">Renato Santos</a>
         &nbsp;·&nbsp; <span id="footerYear">2026</span>
-        <br><span class="footer-updated">Atualizado em setembro de 2026</span>
+        <br><span class="footer-updated">Atualizado em outubro de 2026</span>
     </p>
 </footer>
 
