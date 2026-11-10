@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renato Santos | Analista de Dados Jr.</title>
-    <meta name="description" content="Portfólio de Renato Santos, Analista de Dados Jr. — projetos reais com Python, SQL, Power BI e estatística aplicados a problemas de negócio.">
+    <title>Renato Santos | Analista de Dados Júnior · BI e Análise Estatística</title>
+    <meta name="description" content="Portfólio de Renato Santos, Analista de Dados Júnior (BI e Análise Estatística) — projetos com ETL em Python, SQL, Power BI e estatística aplicada a problemas de negócio.">
     <link rel="canonical" href="https://natoawayrj.github.io/">
     <meta name="theme-color" content="#080d1a">
 
     <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://natoawayrj.github.io/">
-    <meta property="og:title" content="Renato Santos | Analista de Dados Jr.">
+    <meta property="og:title" content="Renato Santos | Analista de Dados Júnior · BI e Análise Estatística">
     <meta property="og:description" content="Python, SQL e Power BI aplicados a problemas de negócio. Projetos com pipeline, modelagem e dashboard executivo.">
     <meta property="og:image" content="https://natoawayrj.github.io/img/og-cover.png">
     <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Renato Santos | Analista de Dados Jr.">
+    <meta name="twitter:title" content="Renato Santos | Analista de Dados Júnior · BI e Análise Estatística">
     <meta name="twitter:description" content="Python, SQL e Power BI aplicados a problemas de negócio.">
     <meta name="twitter:image" content="https://natoawayrj.github.io/img/og-cover.png">
 
@@ -313,6 +313,35 @@
             margin-bottom: 1.25rem;
         }
         .hero-name .accent { color: var(--accent); }
+        .hero-role {
+            display: block;
+            margin-top: 0.9rem;
+            font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            line-height: 1.35;
+            color: var(--text-primary);
+        }
+        .hero-role-sep { color: var(--accent); font-weight: 400; margin: 0 0.25rem; }
+        .hero-keywords {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin: -1.25rem 0 2rem;
+        }
+        .hero-keywords li {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(0,200,255,0.07);
+            border: 1px solid rgba(0,200,255,0.18);
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+        }
+        .hero-secondary { margin-top: 1.1rem; display: flex; gap: 1.5rem; font-size: 0.88rem; }
+        .hero-secondary a { color: var(--text-secondary); text-decoration: none; font-weight: 600; }
+        .hero-secondary a:hover { color: var(--accent); }
 
         .hero-tagline {
             color: var(--text-secondary);
@@ -521,6 +550,7 @@
             color: var(--text-muted);
             letter-spacing: 0.3px;
         }
+        .skill-extra { margin-top: 0.8rem; font-size: 0.76rem; color: var(--text-muted); }
         .skill-proof::before { content: 'Evidência: '; color: var(--accent); font-weight: 600; }
         .tag {
             background: rgba(255,255,255,0.04);
@@ -664,6 +694,61 @@
         }
         .project-link:hover { color: var(--accent); }
         .project-link svg { width: 15px; height: 15px; }
+
+        .projects-group {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 0 0 1.25rem;
+            color: var(--text-primary);
+        }
+        .projects-group span { color: var(--text-muted); font-weight: 500; }
+        .projects-grid + .projects-group { margin-top: 3.5rem; }
+        .project-label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.3rem;
+        }
+        .project-q { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.65; margin-bottom: 1rem; }
+        .project-finding {
+            background: rgba(0,200,255,0.06);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            padding: 0.85rem 1rem;
+            margin-bottom: 1rem;
+        }
+        .project-finding .project-label { color: var(--accent); }
+        .project-finding p { color: var(--text-primary); font-size: 0.92rem; line-height: 1.6; }
+        .project-finding strong { color: var(--accent); }
+        .project-more { margin-bottom: 1.25rem; flex: 1; }
+        .project-more summary {
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            list-style: none;
+        }
+        .project-more summary::-webkit-details-marker { display: none; }
+        .project-more summary::before { content: '+ '; color: var(--accent); font-weight: 700; }
+        .project-more[open] summary::before { content: '− '; }
+        .project-more summary:hover { color: var(--accent); }
+        .project-more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+        .project-more h4 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin: 1rem 0 0.45rem;
+        }
+        .project-more ul { padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem; }
+        .project-more li, .project-more p { color: var(--text-secondary); font-size: 0.86rem; line-height: 1.65; }
+        .project-more code { font-size: 0.8rem; color: var(--text-primary); }
+        .project-links { flex-wrap: wrap; row-gap: 0.6rem; }
 
         /* Coming soon card */
         .card-soon { opacity: 0.55; }
@@ -977,17 +1062,25 @@
             Disponível para oportunidades
         </div>
         <h1 class="hero-name">
-            Renato<br><span class="accent">Santos</span>
+            Renato <span class="accent">Santos</span>
+            <span class="hero-role">Analista de Dados Júnior <span class="hero-role-sep">|</span> BI e Análise Estatística</span>
         </h1>
         <p class="hero-tagline">
-            Analista de Dados Jr. com background em negócios — transformo dados brutos em
-            insights que apoiam decisões reais. Python · SQL · Power BI · Estatística.
+            Transformo dados em análises que apoiam decisões de negócio. Desenvolvo projetos com
+            Python, SQL e Power BI, desde a preparação e modelagem dos dados até a construção de
+            dashboards e a comunicação dos resultados.
         </p>
+        <ul class="hero-keywords" aria-label="Principais competências">
+            <li>ETL em Python</li><li>SQL</li><li>Power BI</li><li>Estatística aplicada</li><li>Storytelling com dados</li>
+        </ul>
         <div class="hero-cta">
-            <a href="#projetos" class="btn-primary">Ver Projetos →</a>
-            <a href="cv.pdf" target="_blank" class="btn-outline">Ver CV ↗</a>
-            <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" class="btn-outline">LinkedIn ↗</a>
+            <a href="#projetos" class="btn-primary">Ver projetos →</a>
+            <a href="cv.pdf" download="Renato-Santos-Analista-de-Dados-CV.pdf" class="btn-outline">Baixar currículo (PDF) ↓</a>
         </div>
+        <p class="hero-secondary">
+            <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/natoawayrj" target="_blank" rel="noopener">GitHub ↗</a>
+        </p>
         </div>
 
         <figure class="hero-visual">
@@ -1073,7 +1166,7 @@
                     </div>
                 </div>
                 <div class="about-btns">
-                    <a href="cv.pdf" target="_blank" class="btn-primary">Ver CV ↗</a>
+                    <a href="cv.pdf" target="_blank" rel="noopener" class="btn-primary">Abrir currículo (PDF) ↗</a>
                     <a href="https://github.com/natoawayrj" target="_blank" class="btn-outline">GitHub ↗</a>
                     <a href="https://www.linkedin.com/in/renato-santos-dados/" target="_blank" class="btn-outline">LinkedIn ↗</a>
                 </div>
@@ -1139,8 +1232,8 @@
         <p class="section-label">Stack técnico</p>
         <h2 class="section-title">Habilidades</h2>
         <p class="section-sub">
-            Ferramentas e tecnologias que uso no dia a dia para análise, engenharia e visualização de
-            dados. Cada card aponta onde a stack aparece — só entra na lista o que tem projeto para provar.
+            Competências organizadas por área. Cada card aponta o projeto que comprova o uso —
+            só entra na lista o que já foi aplicado em projeto.
         </p>
         <div class="skills-grid">
 
@@ -1172,16 +1265,18 @@
                     <span class="tag">SciPy</span>
                     <span class="tag">Jupyter</span>
                 </div>
-                <p class="skill-proof">Todos os projetos</p>
+                <p class="skill-proof">Pizzaria · Brasileirão · HR Analytics · E-commerce</p>
             </div>
 
             <div class="skill-card reveal">
                 <div class="skill-header">
                     <div class="skill-icon" aria-hidden="true">🗃️</div>
-                    <span class="skill-title">SQL & Bancos de Dados</span>
+                    <span class="skill-title">SQL para Análise de Dados</span>
                 </div>
                 <div class="tag-list">
-                    <span class="tag">SQL</span>
+                    <span class="tag">JOINs e agregações</span>
+                    <span class="tag">Views analíticas</span>
+                    <span class="tag">Modelagem relacional</span>
                     <span class="tag">MySQL</span>
                     <span class="tag">SQLite</span>
                 </div>
@@ -1210,13 +1305,13 @@
                 </div>
                 <div class="tag-list">
                     <span class="tag">Pipeline ETL</span>
-                    <span class="tag">Star Schema</span>
-                    <span class="tag">Flask / SQLAlchemy</span>
-                    <span class="tag">Limpeza de Dados</span>
-                    <span class="tag">FastAPI</span>
-                    <span class="tag">Docker Compose</span>
+                    <span class="tag">Modelagem dimensional (star schema)</span>
+                    <span class="tag">Qualidade de dados</span>
+                    <span class="tag">Testes automatizados</span>
+                    <span class="tag">SQL / MySQL</span>
                     <span class="tag">Git / GitHub</span>
                 </div>
+                <p class="skill-extra">Também aplicado: Flask, SQLAlchemy, FastAPI e Docker Compose</p>
                 <p class="skill-proof">Pizzaria · Brasileirão · Pronúncia</p>
             </div>
 
@@ -1247,14 +1342,15 @@
         <p class="section-label">Portfólio</p>
         <h2 class="section-title">Projetos</h2>
         <p class="section-sub">
-            Projetos práticos aplicando Python, SQL e Power BI em problemas de negócio nas áreas
-            de food service, esportes, RH e vendas, e um app com IA local (Whisper + LLM), API e Docker.
-            Onde os dados são sintéticos ou de exercício, o card diz.
+            Cada card mostra a pergunta de negócio e o principal resultado. Abra os detalhes para ver
+            método, regras de cálculo e limitações, ou vá direto ao código. Onde os dados são
+            sintéticos ou de exercício, o card diz.
         </p>
+        <h3 class="projects-group">Projetos principais <span>· Dados e BI</span></h3>
         <div class="projects-grid">
 
             <!-- ── PIZZARIA JABLONSK ── -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/dashboard1.webp"
                     alt="Dashboard executivo em Power BI da Pizzaria Jablonsk com faturamento, ticket médio e NPS"
@@ -1273,19 +1369,29 @@
                 <div class="project-body">
                     <span class="project-type">Python · MySQL · Power BI · Engenharia de Dados</span>
                     <h3 class="project-title">Pizzaria Jablonsk — Pipeline de Dados End-to-End</h3>
-                    <p class="project-desc">
-                        <strong>Problema:</strong> como construir uma cadeia completa de dados quando não
-                        existe nenhum dado? <strong>Solução:</strong> modelei o domínio, construí o sistema
-                        transacional (Flask + MySQL), gerei 6 meses de operação com um simulador de demanda
-                        parametrizado (sazonalidade por dia da semana e por hora) e montei views em star
-                        schema sobre as tabelas operacionais. <strong>Resultado:</strong> pipeline
-                        OLTP → star schema → dashboard executivo em 3 páginas, com as métricas que uma
-                        pizzaria real acompanharia (faturamento, NPS, SLA de entrega, LTV).
-                    </p>
-                    <p class="project-note">
-                        Dados sintéticos — o objetivo é demonstrar a arquitetura, não extrair conclusões
-                        de mercado.
-                    </p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Como montar, do zero, a cadeia de dados que um gestor de pizzaria usaria para acompanhar faturamento, operação e satisfação dos clientes?</p>
+                    <div class="project-finding">
+                        <span class="project-label">Principal entrega</span>
+                        <p>Pipeline completo <strong>OLTP → star schema → dashboard executivo</strong>, com 6 meses de operação simulada e indicadores de faturamento, NPS, SLA de entrega e LTV.</p>
+                    </div>
+                    <details class="project-more">
+                        <summary>Arquitetura, indicadores e limitações</summary>
+                        <h4>O que foi desenvolvido</h4>
+                        <ul>
+                            <li>Sistema transacional em Flask + MySQL, com modelagem relacional do domínio.</li>
+                            <li>Simulador de demanda parametrizado (sazonalidade por dia da semana e por hora).</li>
+                            <li>Views em star schema sobre as tabelas operacionais (<code>fato_pedidos</code> + dimensões).</li>
+                            <li>Dashboard em Power BI com 3 páginas: Visão Executiva, Produtos &amp; Operação, Clientes &amp; NPS.</li>
+                        </ul>
+                        <h4>Como os indicadores são calculados</h4>
+                        <ul>
+                            <li><strong>NPS:</strong> % promotores (nota 4–5) − % detratores (nota 1–2), sobre avaliações de 1 a 5 — adaptação da escala original de 0 a 10.</li>
+                            <li><strong>% dentro do SLA:</strong> pedidos entregues com ciclo total (recebido → entregue) de até 60 min ÷ pedidos entregues.</li>
+                            <li><strong>LTV médio:</strong> faturamento total ÷ total de clientes no período analisado (receita acumulada por cliente, sem projeção futura).</li>
+                        </ul>
+                        <h4>Limitações</h4>
+                        <p>Dados sintéticos: o objetivo é demonstrar a arquitetura e as regras de cálculo, não extrair conclusões de mercado.</p>
+                    </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">MySQL</span>
@@ -1295,19 +1401,17 @@
                         <span class="project-tag">Star Schema</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/natoawayrj/pizzaria-jablonsk" target="_blank" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            Ver no GitHub
-                        </a>
+                        <a href="https://github.com/natoawayrj/pizzaria-jablonsk" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código no GitHub ↗</a>
+                        <a href="https://github.com/natoawayrj/pizzaria-jablonsk/blob/main/powerbi/dax_measures.md" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>Fórmulas DAX ↗</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- ── BRASILEIRÃO ── -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/brasileirao-1.webp"
-                    alt="Dashboard Brasileirão — Números do campeão"
+                    alt="Dashboard em Power BI do Brasileirão: números do campeão da temporada e posição rodada a rodada"
                     class="project-img zoomable"
                     onerror="this.style.display='none'; document.getElementById('ph-brasileirao').style.display='flex';"
                 >
@@ -1316,32 +1420,35 @@
                     <span>Dashboard Preview</span>
                 </div>
                 <div class="project-gallery">
-                    <img loading="lazy" decoding="async" src="img/brasileirao-2.webp" class="zoomable" alt="Dashboard em Power BI do Brasileirão: relação entre valor de elenco e desempenho em campo">
-                    <img loading="lazy" decoding="async" src="img/brasileirao-3.webp" class="zoomable" alt="Dashboard em Power BI do Brasileirão: análise da tese de Guardiola">
+                    <img loading="lazy" decoding="async" src="img/brasileirao-2.webp" class="zoomable" alt="Dashboard em Power BI do Brasileirão: valor de mercado do elenco versus desempenho, com Spearman por período">
+                    <img loading="lazy" decoding="async" src="img/brasileirao-3.webp" class="zoomable" alt="Dashboard em Power BI do Brasileirão: tese do Guardiola, campeão entre os líderes da 8ª rodada antes e depois de 2018">
                 </div>
                 <p class="gallery-hint">3 páginas do relatório · clique para ampliar</p>
                 <div class="project-body">
                     <span class="project-type">Python · Power BI · Estatística</span>
                     <h3 class="project-title">Análise do Campeonato Brasileiro (2007–2025)</h3>
-                    <p class="project-desc">
-                        <strong>Problema:</strong> quanto o valor de mercado do elenco se associa ao
-                        desempenho no Brasileirão? <strong>Solução:</strong> ETL em Python sobre 19
-                        temporadas (378 pares time-temporada; 17 temporadas completas nas inferências),
-                        com testes automatizados e 3 dashboards no Power BI. <strong>Insights:</strong>
-                        13 de 17 campeões (76%) estavam no G4 de valor de mercado do elenco no ano do
-                        título. Comparando clubes dentro de cada temporada, a correlação de Spearman entre
-                        valor de elenco e pontos fica em torno de 0,67 (de 0,35 a 0,84), sem diferença
-                        entre antes e depois de 2018 (0,67 e 0,68). Descartei o Pearson sobre o valor bruto:
-                        a coluna misturava escalas e moedas entre períodos, o que simulava uma queda após
-                        2018. E a <em>Tese de Guardiola</em> não se sustenta como regra: o líder da 8ª
-                        rodada foi campeão em 4 de 17 temporadas (24%; IC95% 10%–47%).
-                    </p>
-                    <p class="project-note">
-                        Associação não estabelece causalidade: valor de elenco e título compartilham
-                        causas comuns (receita, histórico, gestão). Valor de mercado do elenco não é
-                        o mesmo que investimento realizado. A origem de parte dos dados brutos não está
-                        registrada; fontes e limitações estão documentadas no repositório.
-                    </p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Quanto o valor de mercado dos elencos está associado ao desempenho dos clubes no Brasileirão?</p>
+                    <div class="project-finding">
+                        <span class="project-label">Principal achado</span>
+                        <p><strong>13 de 17 campeões (76%)</strong> estavam entre os 4 elencos de maior valor de mercado na temporada do título. O valor está associado ao desempenho, mas não determina o campeão.</p>
+                    </div>
+                    <details class="project-more">
+                        <summary>Método, indicadores e limitações</summary>
+                        <h4>O que foi desenvolvido</h4>
+                        <ul>
+                            <li>ETL em Python sobre 19 temporadas (378 pares clube-temporada; 17 temporadas completas nas inferências), com 11 testes automatizados (pytest).</li>
+                            <li>Dashboard em Power BI com 3 páginas: Números do campeão, Valor de Mercado vs Performance e Tese do Guardiola.</li>
+                            <li>Correlação de Spearman entre valor de elenco e pontos, calculada dentro de cada temporada: em torno de <strong>0,67</strong> (de 0,35 a 0,84), sem diferença entre antes e depois de 2018 (0,67 e 0,68).</li>
+                            <li><em>Tese de Guardiola</em> testada: o líder da 8ª rodada foi campeão em 4 de 17 temporadas (24%; IC95% 10%–47%): 3 de 10 até 2017 e 1 de 7 depois. Não se sustenta como regra.</li>
+                        </ul>
+                        <h4>Decisões metodológicas</h4>
+                        <ul>
+                            <li><strong>Valor de mercado</strong> = valor de mercado do elenco na temporada, não investimento realizado (compras, salários).</li>
+                            <li>Pearson sobre o valor bruto foi descartado: a coluna misturava escalas e moedas entre períodos, o que simulava uma queda após 2018.</li>
+                        </ul>
+                        <h4>Limitações</h4>
+                        <p>Associação não é causalidade: valor de elenco e título compartilham causas comuns (receita, histórico, gestão). A análise não permite concluir que investir mais, isoladamente, cause melhores resultados. A origem de parte dos dados brutos não está registrada; fontes e limitações estão documentadas no repositório.</p>
+                    </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Pandas</span>
@@ -1351,16 +1458,14 @@
                         <span class="project-tag">Estatística</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/natoawayrj/Analise-Brasileirao" target="_blank" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            Ver no GitHub
-                        </a>
+                        <a href="https://github.com/natoawayrj/Analise-Brasileirao" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código e metodologia no GitHub ↗</a>
+                        <a href="https://github.com/natoawayrj/Analise-Brasileirao/blob/main/bi/verdadeiro.pbix" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>Arquivo do Power BI (.pbix) ↗</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- ── HR ANALYTICS ── -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/hr-1.webp"
                     alt="Gráfico HR Analytics — % procurando trocar de emprego por matrícula universitária"
@@ -1379,20 +1484,27 @@
                 <div class="project-body">
                     <span class="project-type">Python · Análise Exploratória</span>
                     <h3 class="project-title">HR Analytics — Intenção de Troca de Emprego</h3>
-                    <p class="project-desc">
-                        <strong>Problema:</strong> entre 19 mil participantes de um treinamento em Data
-                        Science, quais características se associam à intenção de trocar de emprego?
-                        <strong>Solução:</strong> pipeline ETL modular em Python (v2), tratamento de
-                        ausentes por regras de negócio, correlação de Spearman e WOE/IV.
-                        <strong>Resultado:</strong> ~25% buscam novo emprego, e nenhuma variável isolada
-                        explica bem essa intenção — a mais informativa (matrícula universitária, IV 0,119)
-                        tem poder preditivo apenas moderado, o que indica um fenômeno multifatorial.
-                    </p>
-                    <p class="project-note">
-                        Dados: <em>HR Analytics: Job Change of Data Scientists</em> (Kaggle, dataset
-                        público). O alvo é intenção declarada de mudar de emprego, não desligamento
-                        efetivo — por isso não é tratado como turnover.
-                    </p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Entre 19 mil participantes de um treinamento em Data Science, quais características se associam à intenção de trocar de emprego?</p>
+                    <div class="project-finding">
+                        <span class="project-label">Principal achado</span>
+                        <p><strong>~25%</strong> buscam novo emprego, e <strong>nenhuma variável isolada explica bem</strong> essa intenção: a mais informativa (matrícula universitária, IV 0,119) tem poder preditivo apenas moderado — um fenômeno multifatorial.</p>
+                    </div>
+                    <details class="project-more">
+                        <summary>Método, dados ausentes e limitações</summary>
+                        <h4>O que foi desenvolvido</h4>
+                        <ul>
+                            <li>Pipeline ETL modular em Python (v2), com funções reutilizáveis de carga, imputação e gravação.</li>
+                            <li>Correlação de Spearman e WOE / Information Value para medir a associação de cada variável com o alvo.</li>
+                        </ul>
+                        <h4>Tratamento de dados ausentes</h4>
+                        <ul>
+                            <li>Ausentes concentrados nas variáveis de empresa: <code>company_type</code> (32%), <code>company_size</code> (31%) e <code>gender</code> (23,5%).</li>
+                            <li>Imputação por regras de negócio, criando categorias explícitas em vez de preencher com a moda; 65 linhas sem <code>experience</code> foram removidas.</li>
+                            <li>Corrigido na v2: a imputação de <code>major_discipline</code> sobrescrevia linhas inteiras.</li>
+                        </ul>
+                        <h4>Limitações</h4>
+                        <p>O alvo é intenção declarada de mudar de emprego, não desligamento efetivo — por isso não é tratado como turnover. Associação não é causalidade, e categorias criadas na imputação (como <code>Other</code>) misturam casos diferentes. Dados: <em>HR Analytics: Job Change of Data Scientists</em> (Kaggle, público).</p>
+                    </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Pandas</span>
@@ -1401,16 +1513,18 @@
                         <span class="project-tag">WOE / IV</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/natoawayrj/Initial-HR-Analytics-project" target="_blank" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            Ver no GitHub
-                        </a>
+                        <a href="https://github.com/natoawayrj/Initial-HR-Analytics-project" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código e notebook no GitHub ↗</a>
                     </div>
                 </div>
-            </div>
+            </article>
+
+        </div>
+
+        <h3 class="projects-group">Projetos complementares <span>· BI comercial e solução ponta a ponta</span></h3>
+        <div class="projects-grid">
 
             <!-- ── E-COMMERCE ── -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/ecommerce-1.webp"
                     alt="Dashboard em Power BI de vendas de e-commerce: visão geral com faturamento, ticket médio, ranking de produtos e faturamento por estado"
@@ -1429,20 +1543,26 @@
                 <div class="project-body">
                     <span class="project-type">Python · Power BI · DAX</span>
                     <h3 class="project-title">Dashboard de Vendas — E-commerce</h3>
-                    <p class="project-desc">
-                        <strong>Problema:</strong> como transformar uma base bruta de vendas em indicadores
-                        que um gestor consiga usar? <strong>Solução:</strong> ETL em Python (limpeza,
-                        tipagem e uma tabela plana preparada para o Power BI) e dashboard com KPIs em DAX.
-                        <strong>Resultado:</strong> R$ 6,3 mi de faturamento (R$ 6.302.329) em 600 itens de
-                        pedido, com ticket médio de cerca de R$ 10,5 mil, ranking de produtos e faturamento
-                        por estado, com SP e CE em destaque.
-                    </p>
-                    <p class="project-note">
-                        Dados: base de estudo, fabricada para exercício (50 clientes, 10 produtos,
-                        jan–abr/2026); não representa vendas reais. O projeto mede só receita bruta: sem
-                        custo, margem, devolução ou sazonalidade, e os destaques são propriedades dessa
-                        base, não descobertas de mercado.
-                    </p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Como transformar uma base bruta de vendas em indicadores que um gestor comercial consiga usar para acompanhar receita, produtos e regiões?</p>
+                    <div class="project-finding">
+                        <span class="project-label">Principal achado</span>
+                        <p>Dashboard com <strong>R$ 6,3 mi</strong> de faturamento em 600 itens de pedido, ticket médio de cerca de <strong>R$ 10,5 mil</strong>, ranking de produtos e faturamento por estado (SP e CE em destaque).</p>
+                    </div>
+                    <details class="project-more">
+                        <summary>Método, métricas e limitações</summary>
+                        <h4>O que foi desenvolvido</h4>
+                        <ul>
+                            <li>ETL em Python: limpeza, tipagem e uma tabela plana preparada para o Power BI.</li>
+                            <li>Dashboard com KPIs em DAX e filtros por mês e por estado.</li>
+                        </ul>
+                        <h4>Métricas</h4>
+                        <ul>
+                            <li><strong>Faturamento:</strong> soma da receita bruta dos itens de pedido.</li>
+                            <li><strong>Ticket médio:</strong> faturamento ÷ número de transações (itens de pedido).</li>
+                        </ul>
+                        <h4>Limitações</h4>
+                        <p>Base de estudo fabricada para exercício (50 clientes, 10 produtos, jan–abr/2026); não representa vendas reais. Mede só receita bruta — sem custo, margem, devolução ou sazonalidade —, e os destaques são propriedades da base, não descobertas de mercado.</p>
+                    </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Pandas</span>
@@ -1450,16 +1570,13 @@
                         <span class="project-tag">DAX</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/natoawayrj/E-commerce" target="_blank" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            Ver no GitHub
-                        </a>
+                        <a href="https://github.com/natoawayrj/E-commerce" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código no GitHub ↗</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- ── PRONÚNCIA (IA LOCAL) ── -->
-            <div class="project-card reveal">
+            <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/pronuncia-1.webp"
                     alt="App Pronúncia — leitura guiada: frase-alvo, foco no som, gravação e resultado com nota"
@@ -1479,26 +1596,28 @@
                 <div class="project-body">
                     <span class="project-type">Python · FastAPI · MySQL · Docker · IA Local</span>
                     <h3 class="project-title">Pronúncia — App de Inglês com IA 100% Local</h3>
-                    <p class="project-desc">
-                        <strong>Problema:</strong> como praticar pronúncia em inglês em casa, com feedback
-                        imediato, sem pagar API e sem enviar a voz de crianças para a nuvem?
-                        <strong>Solução:</strong> API em FastAPI com login JWT, que recebe o áudio, converte
-                        com ffmpeg, transcreve com Whisper local (whisper.cpp), compara a transcrição com a
-                        frase-alvo e pede feedback a um LLM local (Qwen2.5 7B via LM Studio). A pronúncia vem
-                        do CMUdict e a resposta do LLM é validada em Python, para o feedback não inventar sons.
-                        O histórico das tentativas fica em MySQL, e backend + banco sobem juntos com Docker Compose.
-                        <strong>Resultado:</strong> app em uso por 3 pessoas, com leitura guiada, chat em
-                        inglês por texto ou voz, abas de progresso e de sons mais difíceis, painel do
-                        responsável e instalação como PWA no celular. As chamadas aos modelos são trocáveis só pelo <code>.env</code>
-                        (local ou API compatível com OpenAI).
-                    </p>
-                    <p class="project-note">
-                        Decisões de dados: o áudio nunca é gravado (só texto e métricas vão ao banco), a
-                        frase é copiada para dentro de cada tentativa para o histórico não mudar quando ela
-                        é editada, e frases são desativadas em vez de apagadas. Um modelo sem "raciocínio"
-                        respondeu em 7,5 s contra 59 s de um modelo com raciocínio na mesma tarefa.
-                        Uso doméstico, não é um produto em produção.
-                    </p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Como praticar pronúncia em inglês em casa, com feedback imediato, sem pagar API e sem enviar a voz de crianças para a nuvem?</p>
+                    <div class="project-finding">
+                        <span class="project-label">Principal entrega</span>
+                        <p>App <strong>em uso por 3 pessoas</strong>, com leitura guiada, chat em inglês por texto ou voz, abas de progresso e de sons mais difíceis — tudo rodando localmente.</p>
+                    </div>
+                    <details class="project-more">
+                        <summary>Arquitetura, decisões de dados e limitações</summary>
+                        <h4>Arquitetura</h4>
+                        <ul>
+                            <li>API em FastAPI com login JWT: recebe o áudio, converte com ffmpeg e transcreve com Whisper local (whisper.cpp).</li>
+                            <li>Compara a transcrição com a frase-alvo e pede feedback a um LLM local (Qwen2.5 7B via LM Studio); a resposta é validada em Python contra o CMUdict, para o feedback não inventar sons.</li>
+                            <li>Backend + MySQL sobem juntos com Docker Compose; modelos trocáveis só pelo <code>.env</code> (local ou API compatível com OpenAI).</li>
+                        </ul>
+                        <h4>Decisões de dados e privacidade</h4>
+                        <ul>
+                            <li>O áudio nunca é gravado: só texto e métricas vão ao banco.</li>
+                            <li>A frase é copiada para cada tentativa, para o histórico não mudar quando ela é editada; frases são desativadas, não apagadas.</li>
+                            <li>Um modelo sem "raciocínio" respondeu em 7,5 s contra 59 s de um modelo com raciocínio na mesma tarefa.</li>
+                        </ul>
+                        <h4>Limitações</h4>
+                        <p>Uso doméstico, não é um produto em produção.</p>
+                    </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">FastAPI</span>
@@ -1509,13 +1628,10 @@
                         <span class="project-tag">LLM local</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/natoawayrj/Ingl-s" target="_blank" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            Ver no GitHub
-                        </a>
+                        <a href="https://github.com/natoawayrj/Ingl-s" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código no GitHub ↗</a>
                     </div>
                 </div>
-            </div>
+            </article>
 
         </div>
 
