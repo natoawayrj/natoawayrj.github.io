@@ -48,7 +48,7 @@ python -m http.server 8000
 |---|---|---|
 | Pizzaria Jablonsk — Pipeline de Dados End-to-End | Python · MySQL · Power BI | [pizzaria-jablonsk](https://github.com/natoawayrj/pizzaria-jablonsk) |
 | Análise do Campeonato Brasileiro (2007–2025) | Python · Power BI · Estatística | [Analise-Brasileirao](https://github.com/natoawayrj/Analise-Brasileirao) |
-| HR Analytics — Intenção de Troca de Emprego | Python · EDA · WOE/IV | [Initial-HR-Analytics-project](https://github.com/natoawayrj/Initial-HR-Analytics-project) |
+| HR Analytics — Intenção de Troca de Emprego | Python · Power BI · WOE/IV | [Initial-HR-Analytics-project](https://github.com/natoawayrj/Initial-HR-Analytics-project) |
 | Dashboard de Vendas — E-commerce | Python · Power BI · DAX | [E-commerce](https://github.com/natoawayrj/E-commerce) |
 | Pronúncia — App de Inglês com IA 100% Local | Python · FastAPI · MySQL · Docker | [Ingl-s](https://github.com/natoawayrj/Ingl-s) |
 

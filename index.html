@@ -1249,7 +1249,7 @@
                     <span class="tag">KPIs & Dashboards</span>
                     <span class="tag">Power Query</span>
                 </div>
-                <p class="skill-proof">Pizzaria · Brasileirão · E-commerce</p>
+                <p class="skill-proof">Pizzaria · Brasileirão · HR Analytics · E-commerce</p>
             </div>
 
             <div class="skill-card reveal">
@@ -1468,52 +1468,57 @@
             <article class="project-card reveal">
                 <img loading="lazy" decoding="async"
                     src="img/hr-1.webp"
-                    alt="Gráfico HR Analytics — % procurando trocar de emprego por matrícula universitária"
+                    alt="Dashboard em Power BI do HR Analytics: taxa de intenção de mudança de emprego por tipo de empresa, experiência, escolaridade e desenvolvimento da cidade"
                     class="project-img zoomable"
                     onerror="this.style.display='none'; document.getElementById('ph-hr').style.display='flex';"
                 >
                 <div class="project-img-placeholder" id="ph-hr" style="display:none;">
                     <span class="emoji" aria-hidden="true">👥</span>
-                    <span>Análise Exploratória · Python</span>
+                    <span>Análise Exploratória · Python · Power BI</span>
                 </div>
                 <div class="project-gallery">
-                    <img loading="lazy" decoding="async" src="img/hr-2.webp" class="zoomable" alt="Gráfico de Information Value por variável na análise de intenção de turnover do HR Analytics">
-                    <img loading="lazy" decoding="async" src="img/hr-3.webp" class="zoomable" alt="Matriz de correlação de Spearman entre variáveis do HR Analytics">
+                    <img loading="lazy" decoding="async" src="img/hr-3.webp" class="zoomable" alt="Página de detalhamento do dashboard: matriz de escolaridade por tipo de empresa e tabela por faixa de experiência">
+                    <img loading="lazy" decoding="async" src="img/hr-2.webp" class="zoomable" alt="Gráfico de Information Value por variável na análise de intenção de mudança de emprego">
                 </div>
-                <p class="gallery-hint">3 gráficos da análise (Python) · clique para ampliar</p>
+                <p class="gallery-hint">Dashboard Power BI (2 páginas) e análise em Python · clique para ampliar</p>
                 <div class="project-body">
-                    <span class="project-type">Python · Análise Exploratória</span>
+                    <span class="project-type">Python · Power BI · Análise Exploratória</span>
                     <h3 class="project-title">HR Analytics — Intenção de Troca de Emprego</h3>
-                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Entre 19 mil participantes de um treinamento em Data Science, quais características se associam à intenção de trocar de emprego?</p>
+                    <p class="project-q"><span class="project-label">Pergunta de negócio</span>Entre 19 mil participantes de um treinamento em Data Science, quais características se associam à intenção declarada de trocar de emprego?</p>
                     <div class="project-finding">
                         <span class="project-label">Principal achado</span>
-                        <p><strong>~25%</strong> buscam novo emprego, e <strong>nenhuma variável isolada explica bem</strong> essa intenção: a mais informativa (matrícula universitária, IV 0,119) tem poder preditivo apenas moderado — um fenômeno multifatorial.</p>
+                        <p><strong>24,9%</strong> declararam intenção de mudar. A associação mais forte é com o desenvolvimento da cidade: <strong>57,9%</strong> onde o índice é menor que 0,60, contra <strong>16,0%</strong> a partir de 0,85. É uma associação, não uma causa.</p>
                     </div>
                     <details class="project-more">
-                        <summary>Método, dados ausentes e limitações</summary>
+                        <summary>Método, dados ausentes, robustez e limitações</summary>
                         <h4>O que foi desenvolvido</h4>
                         <ul>
-                            <li>Pipeline ETL modular em Python (v2), com funções reutilizáveis de carga, imputação e gravação.</li>
-                            <li>Correlação de Spearman e WOE / Information Value para medir a associação de cada variável com o alvo.</li>
+                            <li>Tratamento em Python com dados brutos e tratados separados (<code>dataset/raw</code> → <code>dataset/processed</code>).</li>
+                            <li>Associação de cada variável com o alvo por taxas, V de Cramér, Spearman e WOE / Information Value.</li>
+                            <li>Dashboard em Power BI com 2 páginas: visão geral e detalhamento cruzado.</li>
                         </ul>
-                        <h4>Tratamento de dados ausentes</h4>
+                        <h4>Dados ausentes</h4>
                         <ul>
-                            <li>Ausentes concentrados nas variáveis de empresa: <code>company_type</code> (32%), <code>company_size</code> (31%) e <code>gender</code> (23,5%).</li>
-                            <li>Imputação por regras de negócio, criando categorias explícitas em vez de preencher com a moda; 65 linhas sem <code>experience</code> foram removidas.</li>
-                            <li>Corrigido na v2: a imputação de <code>major_discipline</code> sobrescrevia linhas inteiras.</li>
+                            <li>Teste qui-quadrado mostrou que a ausência <strong>não é aleatória</strong>: com <code>company_type</code> em branco, 38,8% declararam intenção de mudar; preenchido, 18,4%.</li>
+                            <li>Por isso os ausentes viraram categoria própria, em vez de moda. No painel, <code>Other</code> é 98% "não informado" (6.104 de 6.225) e isso está escrito no gráfico.</li>
+                            <li>65 linhas sem <code>experience</code> removidas (impacto &lt; 0,1 p.p. na taxa geral).</li>
                         </ul>
+                        <h4>Robustez</h4>
+                        <p>Quatro checagens: V de Cramér com três tratamentos de ausentes, taxas antes e depois do tratamento, análise só com casos completos (11.708 linhas) e efeito das linhas removidas. A direção das associações de cidade, experiência relevante e matrícula se mantém em todas.</p>
                         <h4>Limitações</h4>
-                        <p>O alvo é intenção declarada de mudar de emprego, não desligamento efetivo — por isso não é tratado como turnover. Associação não é causalidade, e categorias criadas na imputação (como <code>Other</code>) misturam casos diferentes. Dados: <em>HR Analytics: Job Change of Data Scientists</em> (Kaggle, público).</p>
+                        <p>O alvo é intenção declarada, não desligamento efetivo, por isso não é tratado como turnover. Dados observacionais, sem controle de fatores de confusão: associação não é causalidade. Dados: <em>HR Analytics: Job Change of Data Scientists</em> (Kaggle, público).</p>
                     </details>
                     <div class="project-tags">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Pandas</span>
-                        <span class="project-tag">Seaborn</span>
-                        <span class="project-tag">Spearman</span>
+                        <span class="project-tag">SciPy</span>
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">DAX</span>
                         <span class="project-tag">WOE / IV</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/natoawayrj/Initial-HR-Analytics-project" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Código e notebook no GitHub ↗</a>
+                        <a href="https://github.com/natoawayrj/Initial-HR-Analytics-project/blob/main/rh.pbix" target="_blank" rel="noopener" class="project-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>Arquivo do Power BI (.pbix) ↗</a>
                     </div>
                 </div>
             </article>
