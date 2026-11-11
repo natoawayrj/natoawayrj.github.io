@@ -42,7 +42,7 @@
             --accent-2:      #6366f1;
             --text-primary:  #e2e8f0;
             --text-secondary:#94a3b8;
-            --text-muted:    #64748b;
+            --text-muted:    #7d8da3;
             --radius:        12px;
             --transition:    all 0.3s ease;
         }
@@ -994,6 +994,28 @@
             #hero { min-height: auto; }
         }
 
+
+        /* Rótulos de seção iguais em todas as seções (sobre/contato herdavam o estilo de <p>) */
+        .about-text .section-label, .contact-text > .section-label {
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--accent);
+            line-height: normal; margin-bottom: 0.6rem;
+        }
+
+        /* Card ímpar no fim da grade ocupa a largura toda, com imagem à esquerda e texto à direita */
+        @media (min-width: 901px) {
+            .projects-grid > .project-card:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                display: grid;
+                grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+                align-content: start;
+            }
+            .projects-grid > .project-card:last-child:nth-child(odd) > :not(.project-body) { grid-column: 1; }
+            .projects-grid > .project-card:last-child:nth-child(odd) > .project-body {
+                grid-column: 2; grid-row: 1 / span 5; border-left: 1px solid var(--border);
+            }
+        }
+
         @media (max-width: 900px) {
             .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
             .photo-frame { width: 260px; margin: 0 auto; }
@@ -1715,7 +1737,7 @@
         Desenvolvido com ♥ por
         <a href="https://github.com/natoawayrj" target="_blank">Renato Santos</a>
         &nbsp;·&nbsp; <span id="footerYear">2026</span>
-        <br><span class="footer-updated">Atualizado em outubro de 2026</span>
+        <br><span class="footer-updated">Atualizado em novembro de 2026</span>
     </p>
 </footer>
 
