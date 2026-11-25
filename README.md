@@ -5,8 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-online-222?logo=github)
 
-Portfólio de Analista de Dados Júnior (BI e Análise Estatística). Reúne projetos com ETL em
-Python, SQL, Power BI e estatística aplicada a problemas de negócio.
+Portfólio de Analista de Dados Júnior (SQL, BI e Análise Estatística). Ex-Analista de Negócios na ACT Digital (10 dashboards em Power BI), com projetos práticos usando SQL analítico, Python, Power BI e dados reais.
 
 ## Demonstração
 
@@ -14,21 +13,17 @@ Site no ar: **[natoawayrj.github.io](https://natoawayrj.github.io/)**
 
 ## Tecnologias
 
-HTML, CSS e JavaScript puro, em um único `index.html`, sem frameworks nem build.
+HTML, CSS e JavaScript puro em um único `index.html`, sem frameworks nem etapa de build.
 
 ## Arquitetura
 
 | Caminho | Conteúdo |
 |---|---|
-| `index.html` | página inteira: conteúdo, estilos e scripts |
-| `img/` | capturas dos dashboards e fotos (WebP) |
+| `index.html` | página inteira: conteúdo, estilos e scripts interativos |
+| `img/` | capturas dos dashboards, gráficos SQL e foto (WebP/JPG/PNG) |
 | `cv.pdf` | currículo baixado pelo botão "Baixar currículo" |
 
-## Pré-requisitos e instalação
-
-Nenhum. Basta um navegador; para editar, clone o repositório.
-
-## Como executar
+## Como executar localmente
 
 Abra `index.html` no navegador ou sirva a pasta localmente:
 
@@ -36,25 +31,15 @@ Abra `index.html` no navegador ou sirva a pasta localmente:
 python -m http.server 8000
 ```
 
-## Funcionalidades
+## Projetos apresentados
 
-- Abertura com cargo-alvo, competências e botões para projetos e currículo.
-- Cards de projeto em três níveis: pergunta de negócio e principal achado; método, regras de
-  cálculo e limitações (expansível); links para código e arquivos.
-- Projetos principais (Dados e BI) separados dos complementares.
-- Galeria com zoom, layout responsivo, foco visível no teclado e respeito a movimento reduzido.
-
-| Projeto | Stack | Repositório |
-|---|---|---|
-| Pizzaria Jablonsk — Pipeline de Dados End-to-End | Python · MySQL · Power BI | [pizzaria-jablonsk](https://github.com/natoawayrj/pizzaria-jablonsk) |
-| Análise do Campeonato Brasileiro (2007–2025) | Python · Power BI · Estatística | [Analise-Brasileirao](https://github.com/natoawayrj/Analise-Brasileirao) |
-| HR Analytics — Intenção de Troca de Emprego | Python · Power BI · WOE/IV | [Initial-HR-Analytics-project](https://github.com/natoawayrj/Initial-HR-Analytics-project) |
-| Dashboard de Vendas — E-commerce | Python · Power BI · DAX | [E-commerce](https://github.com/natoawayrj/E-commerce) |
-| Pronúncia — App de Inglês com IA 100% Local | Python · FastAPI · MySQL · Docker | [Ingl-s](https://github.com/natoawayrj/Ingl-s) |
-
-## Contribuição
-
-Sugestões são bem-vindas por issue.
+| # | Projeto | Stack | Repositório / Painel |
+|---|---|---|---|
+| 1 | Análise do Campeonato Brasileiro (2007–2025) | Python · Power BI · Estatística | [Analise-Brasileirao](https://github.com/natoawayrj/Analise-Brasileirao) |
+| 2 | Pizzaria Jablonsk — Pipeline de Dados End-to-End | SQL · MySQL · Python · Power BI | [pizzaria-jablonsk](https://github.com/natoawayrj/pizzaria-jablonsk) |
+| 3 | Olist E-commerce — Retenção, Pareto e SLA em SQL | SQL · CTEs · Window Functions · Coortes | [olist-sql-analytics](https://github.com/natoawayrj/olist-sql-analytics) · [Painel Web](https://natoawayrj.github.io/olist-sql-analytics/) |
+| 4 | HR Analytics — Intenção de Troca de Emprego | Python · Power BI · EDA | [Initial-HR-Analytics-project](https://github.com/natoawayrj/Initial-HR-Analytics-project) · [Painel Web](https://natoawayrj.github.io/Initial-HR-Analytics-project/Dashboard_ProjetoRH.html) |
+| 5 | Pronúncia — App com Telemetria em MySQL e IA Local | Python · MySQL · FastAPI · Docker | [app-pronuncia-ingles](https://github.com/natoawayrj/app-pronuncia-ingles) |
 
 ## Autor e licença
 
